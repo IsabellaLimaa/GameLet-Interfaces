@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: rgb(16, 16, 29);
+    padding: 15px;
+}
+
+.nav-links a{
+    text-decoration: none;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a, li{
+    color: white;
+}
+
+
+#titulo-site{
+    margin-top: 8px;
+    font-size: 25px;
+    color: rgb(156, 211, 46);
+    font-style: sans-serif;
+
+}
+
+.btn-buscar{
+    margin-left: 1470%;
+    margin-top: 6px;
+    padding: 9px;
+    border: none;
+    background-color: rgb(156, 211, 46);
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s;
+    border-radius: 8px;
+}
+
+#titulo-home{
+    margin-left: 50px;
+    margin-top: 15px;;
+}
+
+#titulo-sobre{
+    margin-left: 50px;
+    margin-top: 15px;
+}
+
+#barra-busca{
+    margin-left: 310%;
+    margin-top: 6px;
+    display: flex;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    overflow: hidden;
+    height: 30px;
+    width: 300px;
+}
+
+#titulo-login{
+    margin-left: 50px;
+    margin-top: 15px;
+}
+
+ #img-logo{
+    margin-top: 6px;
+ }
+
+.footer {
+  background-color: rgb(16, 16, 29);  
+  color: white;              
+  padding: 20px 40px;         
+  text-align: center;         
+  margin-top: 100%;         
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;            
+}
+
+.footer-links {
+  list-style: none;           
+  padding: 0;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;    
+  gap: 20px;                  
+}
+
+.footer-links li a {
+  color: #ffffffcc;         
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links li a:hover {
+  text-decoration: underline;
+}
+
+p{
+    color: rgb(156, 211, 46);
+}
