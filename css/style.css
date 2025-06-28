@@ -1,108 +1,146 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-nav{
-    background-color: rgb(16, 16, 29);
-    padding: 15px;
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
-.nav-links a{
-    text-decoration: none;
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: sans-serif;
 }
 
-.nav-links li a:hover {
-  text-decoration: underline;
+main {
+  flex: 1;
 }
 
-ul{
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+/* ------------------------- BARRA DE NAVEGAÇÃO -------------------------*/
+
+.navbar {
+  background-color: #10101D;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  position: relative;
 }
 
-a, li{
-    color: white;
+/* Menu links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
 }
 
-
-#titulo-site{
-    margin-top: 8px;
-    font-size: 25px;
-    color: rgb(156, 211, 46);
-    font-style: sans-serif;
-
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.btn-buscar{
-    margin-left: 1470%;
-    margin-top: 6px;
-    padding: 9px;
-    border: none;
-    background-color: rgb(156, 211, 46);
-    color: white;
-    cursor: pointer;
-    font-size: 15px;
-    transition: background-color 0.3s;
-    border-radius: 8px;
+/* Parte da direita */
+.nav-direita {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-#titulo-home{
-    margin-left: 50px;
-    margin-top: 15px;;
+.barra-busca {
+  height: 30px;
+  padding: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 200px;
 }
 
-#titulo-sobre{
-    margin-left: 50px;
-    margin-top: 15px;
+.btn-buscar,
+.btn-entrar {
+  background-color: #9cd32e;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s;
 }
 
-#barra-busca{
-    margin-left: 310%;
-    margin-top: 6px;
-    display: flex;
-    border-radius: 8px;
-    border: 2px solid #ccc;
-    overflow: hidden;
-    height: 30px;
-    width: 300px;
+.btn-buscar:hover,
+.btn-entrar:hover {
+  background-color: #89b829;
 }
 
-#titulo-login{
-    margin-left: 50px;
-    margin-top: 15px;
+/* Ícone do menu hambúrguer */
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
 }
 
- #img-logo{
-    margin-top: 6px;
- }
+/* Checkbox invisível */
+#menu-toggle {
+  display: none;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 30px;
+  height: auto;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #9cd32e;
+}
+
+/* ----------- RODAPÉ ------------ */
 
 .footer {
-  background-color: rgb(16, 16, 29);  
-  color: white;              
-  padding: 20px 40px;         
-  text-align: center;         
-  margin-top: 100%;         
+  background-color: #10101D;
+  color: white;
+  padding: 20px 40px;
+  text-align: center;
+  margin-top: 40px;
 }
 
 .footer-content {
   max-width: 1000px;
-  margin: 0 auto;            
+  margin: 0 auto;
+}
+
+.footer p {
+  color: #9cd32e;
+  font-size: 14px;
 }
 
 .footer-links {
-  list-style: none;           
+  list-style: none;
   padding: 0;
-  margin-top: 10px;
+  margin: 15px 0 0 0;
   display: flex;
-  justify-content: center;    
-  gap: 20px;                  
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .footer-links li a {
-  color: #ffffffcc;         
+  color: #ffffffcc;
   text-decoration: none;
   font-size: 14px;
 }
@@ -111,6 +149,49 @@ a, li{
   text-decoration: underline;
 }
 
-p{
-    color: rgb(156, 211, 46);
+
+/* ----------- RESPONSIVO ------------ */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+
+  .nav-links,
+  .nav-direita {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  #menu-toggle:checked~.nav-links,
+  #menu-toggle:checked~.nav-direita {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a,
+  .btn-entrar,
+  .btn-buscar,
+  .barra-busca {
+    width: 100%;
+    text-align: left;
+  }
+
+  .barra-busca {
+    width: 100%;
+  }
 }
