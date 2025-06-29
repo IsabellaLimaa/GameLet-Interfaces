@@ -36,6 +36,67 @@
 
     <main>
 
+        <h1 id="titulo-destaque">Destaques</h1>
+
+        <div class="carrossel">
+            <input type="radio" name="slide" id="slide1" checked>
+            <input type="radio" name="slide" id="slide2">
+            <input type="radio" name="slide" id="slide3">
+
+            <div class="slides">
+                <div class="slide s1">
+                    <img src="imagens/banner-cyberpunk.jpg" alt="Slide 1">
+                </div>
+                <div class="slide s2">
+                    <img src="imagens/banner-bo2.jpg" alt="Slide 2">
+                </div>
+                <div class="slide s3">
+                    <img src="imagens/banner-eldenring.jpg" alt="Slide 3">
+                </div>
+            </div>
+
+            <div class="navegacao-manual">
+                <label for="slide1" class="manual-btn"></label>
+                <label for="slide2" class="manual-btn"></label>
+                <label for="slide3" class="manual-btn"></label>
+            </div>
+        </div>
+
+        <h2 id="titulo-jogos">Jogos</h2>
+
+        <section class="grid-jogos">
+            <!-- Card Editar -->
+            <div class="card-jogo editar-jogo">
+                <div class="icone-mais">+</div>
+                <h3>Editar jogos</h3>
+                <p>Gerencie os jogos cadastrados no sistema</p>
+            </div>
+
+            <!-- Cards normais -->
+            <div class="card-jogo">
+                <img src="imagens/eldenring.jpg" alt="Elden Ring">
+                <h3>Elden Ring</h3>
+                <p>R$ 249,90</p>
+            </div>
+
+            <div class="card-jogo">
+                <img src="imagens/banner-cyberpunk.jpg" alt="Cyberpunk 2077">
+                <h3>Cyberpunk 2077</h3>
+                <p>R$ 199,90</p>
+            </div>
+
+            <div class="card-jogo">
+                <img src="imagens/bo2.jpg" alt="Black Ops 2">
+                <h3>Call of Duty: Black Ops 2</h3>
+                <p>R$ 99,90</p>
+            </div>
+        </section>
+
+
+        </section>
+
+
+
     </main>
 
     <footer class="footer">
@@ -51,7 +112,6 @@
                 </ul>
             </div>
         </footer>
-
     </footer>
 
 

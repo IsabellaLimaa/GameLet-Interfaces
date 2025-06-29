@@ -13,6 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: #10101D;
   font-family: sans-serif;
 }
 
@@ -109,48 +110,103 @@ main {
   color: #9cd32e;
 }
 
-/* ----------- RODAPÉ ------------ */
 
-.footer {
-  background-color: #10101D;
+
+/* ----------- TITULOS ------------ */
+
+#titulo-destaque{
   color: white;
-  padding: 20px 40px;
+}
+
+#titulo-jogos{
+  background-color: #10101de7;
+  color: white;
   text-align: center;
-  margin-top: 40px;
+  padding: 40px;
 }
 
-.footer-content {
-  max-width: 1000px;
-  margin: 0 auto;
+
+@media (max-width: 768px) {
+  #titulo-destaque{
+    font-size: 1rem;
+  }
+
+#titulo-jogos{
+    font-size: 0.8rem;
+  }
+}
+ 
+/* ----------- CARROSEL ------------ */
+
+.carrossel {
+  position: relative;
+  width: 100vw; 
+  height: 600px; 
+  overflow: hidden;
 }
 
-.footer p {
-  color: #9cd32e;
-  font-size: 14px;
-}
-
-.footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 15px 0 0 0;
+.slides {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  width: 300%; 
+  height: 100%;
+  transition: margin-left 0.5s ease-in-out;
 }
 
-.footer-links li a {
-  color: #ffffffcc;
-  text-decoration: none;
-  font-size: 14px;
+.slide {
+  flex: 0 0 100vw; 
+  height: 100%;
 }
 
-.footer-links li a:hover {
-  text-decoration: underline;
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
 }
 
+/* Radios invisíveis */
+input[type="radio"] {
+  display: none;
+}
 
-/* ----------- RESPONSIVO ------------ */
+/* Navegação manual (bolinhas) */
+.navegacao-manual {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.manual-btn {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #9cd32e;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background-color: transparent;
+}
+
+.manual-btn:hover {
+  background-color: #9cd32e;
+}
+
+/* Controle dos slides */
+#slide1:checked ~ .slides {
+  margin-left: 0%;
+}
+
+#slide2:checked ~ .slides {
+  margin-left: -100vw;
+}
+
+#slide3:checked ~ .slides {
+  margin-left: -200vw;
+}
+
 
 @media (max-width: 768px) {
   .navbar {
@@ -194,4 +250,128 @@ main {
   .barra-busca {
     width: 100%;
   }
+
+  .carrossel {
+    height: 200px; 
+  }
+}
+
+/* ----------- CARDS ------------ */
+
+.grid-jogos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 por linha */
+  gap: 30px;
+  padding: 40px;
+  background-color: #10101de7;
+}
+
+/* Card padrão */
+.card-jogo {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.card-jogo:hover {
+  transform: translateY(-5px);
+}
+
+.card-jogo img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+.card-jogo h3 {
+  margin: 15px 0 5px;
+  font-size: 18px;
+  color: #000000;
+}
+
+.card-jogo p {
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: #0000009d;
+}
+
+/* Card especial: Editar jogos */
+.editar-jogo {
+  background-color: #e0e0e0;
+  color: #0f0f0f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icone-mais {
+  font-size: 60px;
+  color: #9cd32e;
+  margin-bottom: 10px;
+}
+
+/* Responsivo: 2 cards por linha no celular */
+@media (max-width: 768px) {
+  .grid-jogos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card-jogo img {
+  height: 200px;
+  }
+}
+
+/* Responsivo: 1 card por linha no celular pequeno */
+@media (max-width: 480px) {
+  .grid-jogos {
+    grid-template-columns: 1fr;
+  }
+
+  .card-jogo img {
+  height: 200px;
+  }
+}
+
+/* ----------- RODAPÉ ------------ */
+
+.footer {
+  background-color: #10101D;
+  color: white;
+  padding: 20px 40px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer p {
+  color: #9cd32e;
+  font-size: 14px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-links li a {
+  color: #ffffffcc;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links li a:hover {
+  text-decoration: underline;
 }
