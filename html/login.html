@@ -1,46 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="/imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
     <title>GameLet</title>
 </head>
 
 <body>
     <header>
-        <nav>
-            <ul class="nav-links">
-                <li><img src="../imagens/favicon.ico" alt="Logo" id="img-logo" width="30px"></li>
-                <li id="titulo-site">GameLet</li>
-                <li id="titulo-home"><a href="../index.html">Home</a></li>
-                <li id="titulo-sobre"><a href="../html/sobre.html">Sobre</a></li>
-                <li id="titulo-login"><a href="../html/login.html">Login</a></li>
-                <li>
-                    <input type="text" placeholder="Buscar jogo..." id="barra-busca">
-                </li>
-                <li>
-                    <button class="btn-buscar">Buscar</button>
-                </li>
-            </ul>
-        </nav>
+        <nav class="navbar">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">☰</label>
 
+            <div class="logo-container">
+                <img src="/imagens/favicon.ico" alt="Logo do Site" class="logo-img" />
+                <div class="logo-text">Gamelet</div>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="/index.html">Início</a></li>
+                <li><a href="html/sobre.html">Sobre</a></li>
+                <li><a href="html/contato.html">Contato</a></li>
+            </ul>
+
+            <div class="nav-direita">
+                <input type="text" class="barra-busca" placeholder="Buscar...">
+                <button class="btn-buscar">Buscar</button>
+                <a href="login.html" class="btn-entrar">Entrar</a>
+            </div>
+        </nav>
     </header>
 
     <main>
+        <div class="container-login">
+        <h1>Login</h1>
 
+        <form class="form-login" action="/login" method="post">
+            <label for="email">E‑mail</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu e‑mail" required>
+
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+
+            <button type="submit">Entrar</button>
+
+            <p style="margin-top: 15px; text-align: center;">
+                Não tem uma conta? <a href="cadastro.html" style="color: #9cd32e;">Cadastre-se</a>
+            </p>
+        </form>
+        </div>
     </main>
 
     <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2025 Isabella Regina de Lima e Douglas Wallace Dias Faria dos Santos. Todos os direitos
-                reservados.</p>
-            <ul class="footer-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../html/sobre.html">Sobre</a></li>
-            </ul>
-        </div>
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 Isabella Regina de Lima e Douglas Wallace Dias Faria dos Santos. Todos os direitos
+                    reservados.</p>
+
+                <ul class="footer-links">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="html/sobre.html">Sobre</a></li>
+                    <li><a href="html/contato.html">Contato</a></li>
+                </ul>
+            </div>
+        </footer>
     </footer>
 
 
