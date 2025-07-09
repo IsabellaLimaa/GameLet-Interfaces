@@ -35,29 +35,50 @@
     </header>
 
     <main>
-        <section class="sobre-projeto">
-            <h1>Sobre o Projeto</h1>
+        <section class="form-jogo">
+            <h1>Adicionar / Editar Jogo</h1>
 
-            <p>Este site foi desenvolvido como um projeto acadêmico com o objetivo de criar uma plataforma moderna para
-                consulta de informações sobre jogos, funcionando como uma espécie de <strong>Wikipédia Gamer</strong>.
-            </p>
+            <form class="formulario-jogo" action="#" method="post" enctype="multipart/form-data">
+                <label for="nome">Nome do Jogo:</label>
+                <input type="text" id="nome" name="nome" required>
 
-            <p>Na plataforma, é possível <strong>visualizar detalhes de diversos jogos</strong>, como sinopse,
-                desenvolvedora, ano de lançamento, avaliação e muito mais. Além disso, o site conta com funcionalidades
-                administrativas que permitem <strong>adicionar, editar e excluir jogos</strong> do sistema.</p>
+                <label for="preco">Preço (R$):</label>
+                <input type="number" id="preco" name="preco" step="0.01" required>
 
-            <p>Usuários podem <strong>criar uma conta e fazer login</strong> para acessar as funcionalidades completas,
-                garantindo uma experiência mais personalizada e segura.</p>
+                <label for="desenvolvedor">Desenvolvedor:</label>
+                <input type="text" id="desenvolvedor" name="desenvolvedor" required>
 
-            <p>Todo o projeto foi construído <strong>exclusivamente com HTML e CSS</strong>, demonstrando o poder dessas
-                tecnologias mesmo sem o uso de linguagens de programação de back-end ou banco de dados. Todas as telas,
-                interações e páginas foram desenvolvidas com atenção à responsividade e à usabilidade.</p>
+                <label for="ano">Ano de Lançamento:</label>
+                <input type="number" id="ano" name="ano" required>
 
-            <p>O site é parte de um trabalho prático que tem como foco aplicar conhecimentos de <strong>estruturação de
-                    páginas, estilização, navegação e experiência do usuário</strong>.</p>
+                <label for="genero">Gênero:</label>
+                <input type="text" id="genero" name="genero" required>
 
-            <a href="../index.html" class="botao-link">Voltar à Página Inicial</a>
+                <label for="classificacao">Classificação Indicativa:</label>
+                <input type="text" id="classificacao" name="classificacao" required>
+
+                <label for="idioma">Idioma:</label>
+                <input type="text" id="idioma" name="idioma" required>
+
+                <label for="plataforma">Plataformas:</label>
+                <input type="text" id="plataforma" name="plataforma" required>
+
+                <label for="avaliacao">Avaliação (ex: 4.5):</label>
+                <input type="number" step="0.1" id="avaliacao" name="avaliacao" min="0" max="5" required>
+
+                <label for="sinopse">Sinopse:</label>
+                <textarea id="sinopse" name="sinopse" rows="4" required></textarea>
+
+                <label for="imagem">Imagem da Capa:</label>
+                <input type="file" id="imagem" name="imagem" accept="image/*" required>
+
+                <button type="submit" class="botao-link">Salvar Jogo</button>
+            </form>
+
+            <a href="../index.html" class="botao-link" style="margin-top: 20px;">Cancelar</a>
         </section>
+
+
 
     </main>
 
@@ -78,7 +99,6 @@
                 </ul>
             </div>
         </footer>
-
     </footer>
 
 
