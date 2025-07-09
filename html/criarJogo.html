@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>GameLet</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">☰</label>
+
+            <div class="logo-container">
+                <img src="/imagens/favicon.ico" alt="Logo do Site" class="logo-img" />
+                <div class="logo-text">Gamelet</div>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="/index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+
+            <div class="nav-direita">
+                <input type="text" class="barra-busca" placeholder="Buscar...">
+                <button class="btn-buscar">Buscar</button>
+                <a href="login.html" class="btn-entrar">Entrar</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-jogo">
+            <h1>Adicionar / Editar Jogo</h1>
+
+            <form class="formulario-jogo" action="#" method="post" enctype="multipart/form-data">
+                <label for="nome">Nome do Jogo:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="preco">Preço (R$):</label>
+                <input type="number" id="preco" name="preco" step="0.01" required>
+
+                <label for="desenvolvedor">Desenvolvedor:</label>
+                <input type="text" id="desenvolvedor" name="desenvolvedor" required>
+
+                <label for="ano">Ano de Lançamento:</label>
+                <input type="number" id="ano" name="ano" required>
+
+                <label for="genero">Gênero:</label>
+                <input type="text" id="genero" name="genero" required>
+
+                <label for="classificacao">Classificação Indicativa:</label>
+                <input type="text" id="classificacao" name="classificacao" required>
+
+                <label for="idioma">Idioma:</label>
+                <input type="text" id="idioma" name="idioma" required>
+
+                <label for="plataforma">Plataformas:</label>
+                <input type="text" id="plataforma" name="plataforma" required>
+
+                <label for="avaliacao">Avaliação (ex: 4.5):</label>
+                <input type="number" step="0.1" id="avaliacao" name="avaliacao" min="0" max="5" required>
+
+                <label for="sinopse">Sinopse:</label>
+                <textarea id="sinopse" name="sinopse" rows="4" required></textarea>
+
+                <label for="imagem">Imagem da Capa:</label>
+                <input type="file" id="imagem" name="imagem" accept="image/*" required>
+
+                <button type="submit" class="botao-link">Salvar Jogo</button>
+            </form>
+
+            <a href="/index.html" class="botao-link" style="margin-top: 20px;">Cancelar</a>
+        </section>
+
+
+
+    </main>
+
+    <footer class="footer">
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 Isabella Regina de Lima e Douglas Wallace Dias Faria dos Santos. Todos os direitos
+                    reservados.</p>
+
+                <ul class="footer-links">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="gerenciarJogos.html">Gerenciar Jogos</a></li>
+                    <li><a href="salvarJogo.html">Adicionar Jogo</a></li>
+                    <li><a href="salvarJogo.html">Editar Jogo</a></li>
+                    <li><a href="detalhesJogo.html">Detalhes do jogo (demonstração)</a></li>
+                </ul>
+            </div>
+        </footer>
+    </footer>
+
+
+</body>
+
+</html>
